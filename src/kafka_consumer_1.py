@@ -5,7 +5,7 @@ from confluent_kafka import Consumer, KafkaException, KafkaError
 conf = {
     'bootstrap.servers': 'localhost:9092',  # Kafka 集群地址
     'group.id': 'my-consumer-group',         # 消费者组 ID
-    'auto.offset.reset': 'earliest'          # 从最早的消息开始消费
+    # 'auto.offset.reset': 'earliest'          # 从最早的消息开始消费
 }
 
 # 创建消费者实例
@@ -17,7 +17,7 @@ consumer.subscribe([topic])
 
 try:
     # 只消费一个消息
-    msg = consumer.poll(timeout=1.0)  # 超时时间为 1 秒
+    msg = consumer.poll(timeout=3.0)  # 超时时间为 1 秒
 
     if msg is None:
         print("没有新消息")
