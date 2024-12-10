@@ -1,3 +1,4 @@
+#生产者产生一个消息
 from confluent_kafka import Producer
 
 # 配置生产者

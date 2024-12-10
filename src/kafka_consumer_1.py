@@ -1,3 +1,4 @@
+#一次就消费一个消息，然后推出
 from confluent_kafka import Consumer, KafkaException, KafkaError
 
 # 配置消费者

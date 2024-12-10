@@ -1,3 +1,4 @@
+#对未消费的信息进行消费，并统计队列中这次消费了多少
 import time
 
 timeout_seconds = 5  # 超时限制，5秒
